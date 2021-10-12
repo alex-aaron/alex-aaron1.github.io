@@ -39,8 +39,11 @@ function greeter(hour) {
     
     
     
+    
     // YOUR CODE ABOVE HERE //
 }
+
+console.log("does the console work");
 
 /*
  * To test our greeter when developing, we need to fake some input data, ie, 
