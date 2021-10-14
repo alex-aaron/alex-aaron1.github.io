@@ -13,7 +13,9 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    return function(value) {
+        return value > base;
+    }
     
     
     
@@ -89,9 +91,16 @@ function modifyStrings(strings, modify) {
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    var stringsPass = true;
+    for (var i = 0; i < strings.length; i++) {
+        // call the current value with the tester function
+        if (test(strings[i]) === true) {
+            stringsPass;
+        } else {
+            return false;
+        }
+    return stringsPass;
+     }
     
     // YOUR CODE ABOVE HERE //
 }
