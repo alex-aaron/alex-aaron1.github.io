@@ -13,7 +13,7 @@
  *  b. Create a factory Function called makeContactList that returns an Object 
  *     that manages contacts. The contact-list object should have the following methods:
  *       
- *      1. length(): returns the number of contacts within the list.
+ *      1. length(): returns the number of contacts within the list (contacts array).
  *      2. addContact(contact): takes a contact object to be added to the 
  *         contact-list.
  *      3. findContact(fullName): takes a full-name String, like 'Max Gaudin', and 
@@ -35,20 +35,30 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-
+    // factory function
+    // returns an object
 } 
+
+// {id: 1, nameFirst: "Dahlak", nameLast: "Keleta"};
 
 
 function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    var contacts;
+    var contacts = []; // [{id: 1, nameFirst: "Alex", nameLast: "Aaron"}, {}]
     
     return {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
+        },
+        addContact: function(contact) { // {id: 2, nameFirst: "Alex", nameLast: "Aaron"}
+            // code for this method here
+            contacts.push(contact);
+        },
+        method2: function() {
+            // code for this method
         }
     }
 }

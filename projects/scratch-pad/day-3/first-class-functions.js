@@ -10,13 +10,16 @@
  * Given an input base to test against, which could be a String or Number, 
  * return a Function that tests whether a given value is greater than the 
  * base.
+ * 
+ * The function greaterThanFilter accepts an input base. In the body
+ * of the function return a function that tests whether the input base
+ * is greater than a passed in value.
  */
-function createGreaterThanFilter(base) {
+function createGreaterThanFilter(base) { // 1 "A"
     // YOUR CODE BELOW HERE //
     return function(value) {
         return value > base;
     }
-    
     
     
     // YOUR CODE ABOVE HERE //
@@ -29,7 +32,9 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    return function(value) {
+        return value < base;
+    }
     
     
     
@@ -41,9 +46,19 @@ function createLessThanFilter(base) {
  * Function that tests whether a given String starts with the startsWith 
  * character.
  */
-function createStartsWithFilter(startsWith) {
+function createStartsWithFilter(startsWith) { // "a"
     // YOUR CODE BELOW HERE //
-    
+    var lowerStartsWith = startsWith.toLowerCase();
+    return function(str) { // "Alex"
+        var lowerStr = str.toLowerCase();
+        // if startsWith matches the first letter of the input string 
+        if (lowerStartsWith === lowerStr[0]) {
+            return true;
+
+        } else {
+            return false;
+        }
+    }
     
     
     
