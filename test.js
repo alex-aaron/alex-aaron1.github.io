@@ -1,0 +1,1 @@
+var newCommit = "new commit";
